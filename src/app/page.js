@@ -17,7 +17,7 @@ export default function Home() {
     if (videoRef.current) {
       videoRef.current.play();
     }
-  }, []);
+  }, [videoRef]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +35,7 @@ export default function Home() {
 
       <div className=''>
         <div className='relative  w-[100%] '>
-          <video ref={videoRef} autoPlay playsInline loop className='w-[100vw]  h-[270px] object-cover'>
+          <video ref={videoRef} autoPlay muted playsInline loop className='w-[100vw]  h-[270px] object-cover' src="https://images-cf.ixigo.workers.dev/videos/shimla">
             <source src="https://www.ixigo.com/product-videos/shimla-desktop.mp4" type="video/mp4" />
           </video>
 
